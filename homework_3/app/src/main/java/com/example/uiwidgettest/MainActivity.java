@@ -1,7 +1,9 @@
 package com.example.uiwidgettest;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -43,9 +45,28 @@ public class MainActivity extends AppCompatActivity {
                             progressBar.setVisibility(View.GONE);
                         }*/
 
-                       int progerss = progressBar.getProgress();
+                       /*int progerss = progressBar.getProgress();
                        progerss = progerss +10;
-                       progressBar.setProgress(progerss);
+                       progressBar.setProgress(progerss);*/
+
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                        dialog.setTitle("This is Dialog");
+                        dialog.setMessage("Something important");
+                        dialog.setCancelable(false);
+                        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                        dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                        dialog.show();
+
                         break;
                     default:
                         break;
