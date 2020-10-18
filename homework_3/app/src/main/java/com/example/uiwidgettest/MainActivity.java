@@ -3,6 +3,7 @@ package com.example.uiwidgettest;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.media.Image;
 import android.os.Bundle;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                        progerss = progerss +10;
                        progressBar.setProgress(progerss);*/
 
-                        AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                       /* AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
                         dialog.setTitle("This is Dialog");
                         dialog.setMessage("Something important");
                         dialog.setCancelable(false);
@@ -65,7 +66,13 @@ public class MainActivity extends AppCompatActivity {
 
                             }
                         });
-                        dialog.show();
+                        dialog.show();*/
+
+                        ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+                        progressDialog.setTitle("This is ProgressDialog");
+                        progressDialog.setMessage("Loading...");
+                        progressDialog.setCancelable(true);
+                        progressDialog.show();
 
                         break;
                     default:
