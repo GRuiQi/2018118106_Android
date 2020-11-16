@@ -13,6 +13,10 @@ Android 应用开发 作业
 
   [实验报告](https://github.com/GRuiQi/2018118106_Android/blob/master/homework_2/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A.md)
 
+- [Intent](https://github.com/GRuiQi/2018118106_Android/tree/master/Intent)
+
+  [实验报告](https://github.com/GRuiQi/2018118106_Android/blob/master/Intent/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A.md)
+
 - [使用常用UI控件](https://github.com/GRuiQi/2018118106_Android/tree/master/homework_3)
 
   [实验报告](https://github.com/GRuiQi/2018118106_Android/blob/master/homework_3/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A.md)
