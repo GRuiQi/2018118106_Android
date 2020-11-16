@@ -12,7 +12,7 @@
         <activity android:name=".SecondActivity">
             <intent-filter>
                 <action android:name="com.example.activitytest.ACTION_START" />
-                <action android:name="com.example.activitytest.MY_START" />
+                <category android:name="com.example.activitytest.MY_CATEGORY" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
