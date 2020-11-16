@@ -3,6 +3,7 @@ package com.example.activitytest;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,10 +18,8 @@ public class FirstActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(FirstActivity.this,
-//                        "You clicked Button 1",Toast.LENGTH_SHORT).show();
-               // Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
-                Intent intent = new Intent("com.example.activitytest.MY_START");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
                 startActivity(intent);
 
             }
