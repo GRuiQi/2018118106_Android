@@ -3,7 +3,7 @@ Android 应用开发 作业
 
 ### 作业入口
 
-- [HelloWorld]()
+- [HelloWorld](https://github.com/GRuiQi/2018118106_Android/tree/master/HelloWorld)
 
 - [Activity生命周期](https://github.com/GRuiQi/2018118106_Android/tree/master/homework_1)
 
