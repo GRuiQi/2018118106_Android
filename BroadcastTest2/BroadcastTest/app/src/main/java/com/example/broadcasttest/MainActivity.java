@@ -20,13 +20,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
                 //这里有坑
-                /*
-                * 安卓9.0，发送自定义静态广播，需要加上intent.setComponent()，而动态的自定义则不需要。
-                *
-                * */
                 intent.setComponent(new ComponentName("com.example.broadcasttest","com.example.broadcasttest.MyBroadcastReceiver"));
-                sendBroadcast(intent);
-                System.out.println(intent);
+
+                 sendBroadcast(intent);
+
+
             }
         });
     }

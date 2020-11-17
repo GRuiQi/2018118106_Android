@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +23,16 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.example.broadcasttest.MY_BROADCAST"/>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".AnotherBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
             </intent-filter>
         </receiver>
     </application>
