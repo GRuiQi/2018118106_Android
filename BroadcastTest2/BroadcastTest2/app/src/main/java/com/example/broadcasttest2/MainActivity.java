@@ -9,8 +9,6 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
         Receiver1 receiver1;
         Receiver2 receiver2;
 
