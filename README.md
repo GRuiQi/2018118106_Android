@@ -1,4 +1,4 @@
-# 2018118106_Android
+### 2018118106_Android
 [TOC]
 
 Android 应用开发 作业
@@ -23,13 +23,13 @@ Android 应用开发 作业
 
 
 
-### 工具链安装和HelloWorld工具
+#### 工具链安装和HelloWorld工具
 
 [HelloWorld](https://github.com/GRuiQi/2018118106_Android/tree/master/HelloWorld)
 
 
 
-### 活动的生命周期与几个回调函数的运用
+#### 活动的生命周期与几个回调函数的运用
 
 [Activity生命周期](https://github.com/GRuiQi/2018118106_Android/tree/master/ActivityLifeCycle/helloworld)
 
@@ -37,7 +37,7 @@ Android 应用开发 作业
 
 
 
-### 多活动的相互调用和活动的四种启动模式
+#### 多活动的相互调用和活动的四种启动模式
 
 [Activity4种启动模式](https://github.com/GRuiQi/2018118106_Android/tree/master/ActivityFourStarUp/StartupMode)
 
@@ -45,7 +45,7 @@ Android 应用开发 作业
 
 
 
-### Intent应用，特别是系统内置隐含Intent和自定义的Intent的使用
+#### Intent应用，特别是系统内置隐含Intent和自定义的Intent的使用
 
 [Intent](https://github.com/GRuiQi/2018118106_Android/tree/master/Intent/ActivityTest)
 
@@ -53,7 +53,7 @@ Android 应用开发 作业
 
 
 
-### 基本UI控件和布局，以及他们的事件回调函数应用
+#### 基本UI控件和布局，以及他们的事件回调函数应用
 
 [使用常用UI控件](https://github.com/GRuiQi/2018118106_Android/tree/master/UIControlsAndLayouts)
 
@@ -61,7 +61,7 @@ Android 应用开发 作业
 
 
 
-### recyclerView在表格型数据处理中的应用
+#### recyclerView在表格型数据处理中的应用
 
 [RecyclerView](https://github.com/GRuiQi/2018118106_Android/tree/master/RecyclerView)
 
@@ -69,7 +69,7 @@ Android 应用开发 作业
 
 
 
-### 广播，自定义广播的使用
+#### 广播，自定义广播的使用
 
 [BroadCast](https://github.com/GRuiQi/2018118106_Android/tree/master/BroadcastTest2)
 
@@ -77,19 +77,19 @@ Android 应用开发 作业
 
 
 
-### 自己创建子线程的程序框架，消息处理机制和多线程之间的数据交换
+#### 自己创建子线程的程序框架，消息处理机制和多线程之间的数据交换
 
 [demo](https://github.com/GRuiQi/2018118106_Android/tree/master/AndroidThreadTest)
 
 [实验报告](https://github.com/GRuiQi/2018118106_Android/blob/master/AndroidThreadTest/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A.md)
 
-### 异步任务的隐含子线程程序框架
+#### 异步任务的隐含子线程程序框架
 
 [demo](https://github.com/GRuiQi/2018118106_Android/tree/master/AsyncTaskTest)
 
 [实验报告](https://github.com/GRuiQi/2018118106_Android/blob/master/AsyncTaskTest/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A.md)
 
-### 服务：启动和停止服务，服务代码运行子线程（注意：一定要熟练到，哪部分代码在哪部个时间片运行，哪个变量是独立的，哪个变量是共享的，多个线程之间如何通讯）
+#### 服务：启动和停止服务，服务代码运行子线程（注意：一定要熟练到，哪部分代码在哪部个时间片运行，哪个变量是独立的，哪个变量是共享的，多个线程之间如何通讯）
 
 
-### 子线程的绑定，子服务代码运行在异步任务
+#### 子线程的绑定，子服务代码运行在异步任务
