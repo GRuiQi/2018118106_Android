@@ -85,7 +85,9 @@ Android 应用开发 作业
 
 ### 异步任务的隐含子线程程序框架
 
+[demo](https://github.com/GRuiQi/2018118106_Android/tree/master/AsyncTaskTest)
 
+[实验报告](https://github.com/GRuiQi/2018118106_Android/blob/master/AsyncTaskTest/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A.md)
 
 ### 服务：启动和停止服务，服务代码运行子线程（注意：一定要熟练到，哪部分代码在哪部个时间片运行，哪个变量是独立的，哪个变量是共享的，多个线程之间如何通讯）
 
