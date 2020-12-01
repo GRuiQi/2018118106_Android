@@ -15,20 +15,23 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, ServiceConnection {
 
     private Button btnStartService,btnStopService,btnBindService,btnUnbindService,startIntentService;
-    private MyService.DownloadBinder downloadBinder;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        viewInit();
+
+    }
+
+    public void viewInit(){
         btnStartService = (Button) findViewById(R.id.btnStartService);
         btnStopService = (Button) findViewById(R.id.btnStopService);
         btnBindService = (Button) findViewById(R.id.btnBindService);
         btnUnbindService = (Button) findViewById(R.id.btnUnbindService);
         startIntentService = (Button) findViewById(R.id.start_intent_service);
-
-
         btnStartService.setOnClickListener(this);
         btnStopService.setOnClickListener(this);
         btnBindService.setOnClickListener(this);
@@ -72,14 +75,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /**
      * Service成功绑定时执行该方法
      * @param name
-     * @param service
+     * @param iBinder
      */
     @Override
-    public void onServiceConnected(ComponentName name, IBinder service) {
+    public void onServiceConnected(ComponentName name, IBinder iBinder) {
 
-        downloadBinder = (MyService.DownloadBinder)service;
-        downloadBinder.startDownload();
-        downloadBinder.getProgress();
+        MyService.MyBinder mb = (MyService.MyBinder) iBinder;
+        int step = mb.getProcess();
+        Log.e("TAG","当前进度是：" + step);
     }
 
     @Override

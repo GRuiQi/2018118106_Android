@@ -10,17 +10,13 @@ public class MyService extends Service {
 
     private static final String  TAG = "MyService";
 
-    private DownloadBinder mBinder = new DownloadBinder();
+    private int i;
 
-    class DownloadBinder extends Binder{
-        public void startDownload(){
-            Log.d(TAG,"startDownload executed");
+    class MyBinder extends Binder{
+        public int getProcess(){
+            return i;
         }
-        public int getProgress(){
-            Log.d(TAG,"getProgress executed");
-            return 0;
-        }
-    };
+    }
 
     public MyService() {
     }
@@ -29,7 +25,7 @@ public class MyService extends Service {
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
         Log.d(TAG,"onBind");
-        return mBinder;
+        return new MyBinder();
     }
 
 
@@ -39,17 +35,32 @@ public class MyService extends Service {
         Log.d(TAG,"onCreate");
         super.onCreate();
 
+
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(TAG,"onStartCommand");
-        new Thread(new Runnable() {
+        /*new Thread(new Runnable() {
             @Override
             public void run() {
-                Log.d(TAG,"处理具体的逻辑");
+                //Log.d(TAG,"处理具体的逻辑");
+
             }
-        }).start();
+        }).start();*/
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    for (i = 1; i <= 100; i++) {
+                        sleep(1000);
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }.start();
         return super.onStartCommand(intent, flags, startId);
 
     }
