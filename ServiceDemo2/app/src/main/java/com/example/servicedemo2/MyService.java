@@ -2,12 +2,25 @@ package com.example.servicedemo2;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
 public class MyService extends Service {
 
-    private static final String  TAG = "TAG";
+    private static final String  TAG = "MyService";
+
+    private DownloadBinder mBinder = new DownloadBinder();
+
+    class DownloadBinder extends Binder{
+        public void startDownload(){
+            Log.d(TAG,"startDownload executed");
+        }
+        public int getProgress(){
+            Log.d(TAG,"getProgress executed");
+            return 0;
+        }
+    };
 
     public MyService() {
     }
@@ -15,7 +28,13 @@ public class MyService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
-        return null;
+        Log.d(TAG,"onBind");
+        return mBinder;
+    }
+
+    private final MyBinder myBinder = new MyBinder();
+    private class MyBinder extends Binder {
+
     }
 
     @Override
@@ -37,4 +56,13 @@ public class MyService extends Service {
         Log.d(TAG,"onDestory");
         super.onDestroy();
     }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        Log.d(TAG,"onUnbind");
+        return super.onUnbind(intent);
+    }
+
+
+
 }
