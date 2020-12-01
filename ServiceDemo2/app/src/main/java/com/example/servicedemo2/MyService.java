@@ -32,10 +32,7 @@ public class MyService extends Service {
         return mBinder;
     }
 
-    private final MyBinder myBinder = new MyBinder();
-    private class MyBinder extends Binder {
 
-    }
 
     @Override
     public void onCreate() {
@@ -47,6 +44,12 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(TAG,"onStartCommand");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Log.d(TAG,"处理具体的逻辑");
+            }
+        }).start();
         return super.onStartCommand(intent, flags, startId);
 
     }
