@@ -101,3 +101,7 @@ Android 应用开发 作业
 
 
 #### 子线程的绑定，子服务代码运行在异步任务
+
+[demo](https://github.com/GRuiQi/2018118106_Android/tree/master/ServiceDemo3)
+
+[实验报告](https://github.com/GRuiQi/2018118106_Android/blob/master/ServiceDemo3/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A.md)
