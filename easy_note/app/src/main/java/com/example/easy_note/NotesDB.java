@@ -29,8 +29,8 @@ public class NotesDB extends SQLiteOpenHelper {
         String createSQL = "create table " + TABLE_NAME + "(" +
                 ID + " integer primary key autoincrement," +
                 CONTENT + " text," +
-                PATH + "path,"+
-                VIDEO + "video,"+
+                PATH + "text,"+
+                VIDEO + "text,"+
                 TIME + " text" +
                 ")";
         db.execSQL(createSQL);
