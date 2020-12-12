@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View v){
         i = new Intent(this,AddContent.class);
-        //i.putExtra("flag","add");
         startActivity(i);
 
     }
