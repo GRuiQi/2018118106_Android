@@ -1,13 +1,12 @@
 package com.example.easy_note;
 
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
 /**
- * 创建数据库
+ *创建数据库
  *如何查看虚拟机里的文件 View - ToolWindows - Device File Explorer
  * data - data - 项目名 - database
  */
@@ -15,8 +14,6 @@ public class NotesDB extends SQLiteOpenHelper {
 
     public static final String TABLE_NAME = "notes";
     public static final String CONTENT = "content";
-    public static final String PATH = "path";
-    public static final String VIDEO = "video";
     public static final String ID = "_id";
     public static final String TIME = "time";
 
@@ -26,11 +23,9 @@ public class NotesDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createSQL = "create table " + TABLE_NAME + "(" +
+        String createSQL = "create table if not exists " + TABLE_NAME + "(" +
                 ID + " integer primary key autoincrement," +
                 CONTENT + " text," +
-                PATH + "text,"+
-                VIDEO + "text,"+
                 TIME + " text" +
                 ")";
         db.execSQL(createSQL);
