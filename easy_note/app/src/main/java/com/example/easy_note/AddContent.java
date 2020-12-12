@@ -15,7 +15,6 @@ public class AddContent extends Activity implements View.OnClickListener {
     //private String val;
     private Button savebtn,deletebtn;
     private EditText ettext;
-
     private NotesDB notesDB;
     private SQLiteDatabase dbWriter;
 

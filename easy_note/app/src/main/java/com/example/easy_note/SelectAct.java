@@ -1,5 +1,8 @@
 package com.example.easy_note;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +16,7 @@ public class SelectAct extends Activity implements View.OnClickListener {
     private TextView s_tv;
     private NotesDB notesDB;
     private SQLiteDatabase dbWriter;
+    private AlertDialog.Builder dialog;
 
 
     @Override
@@ -40,8 +44,27 @@ public class SelectAct extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.delete_select:
-                deleteData();
-                finish();
+
+                dialog = new AlertDialog.Builder(this);
+
+                dialog.setTitle("提示");
+                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        deleteData();
+                        finish();
+                    }
+                });
+                dialog.setCancelable(false);
+                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+                dialog.show();
+
+
                 break;
             case R.id.back_select:
                 finish();
