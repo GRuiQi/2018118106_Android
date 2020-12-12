@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,6 +43,8 @@ public class EditContent extends AppCompatActivity implements View.OnClickListen
             case R.id.save_edit:
                 updateDB();
                 finish();
+                Toast.makeText(this,"编辑成功",Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.cancel_edit:
                 finish();

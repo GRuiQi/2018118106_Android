@@ -11,7 +11,7 @@
         android:layout_weight="1"
         android:background="@null"
         android:gravity="top"
-        android:hint="笔记是思维的缓存！" />
+        android:hint="新建笔记" />
 
     <LinearLayout
         android:layout_width="match_parent"

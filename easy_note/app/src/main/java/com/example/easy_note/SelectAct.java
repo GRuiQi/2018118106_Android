@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class SelectAct extends Activity implements View.OnClickListener {
@@ -49,16 +50,17 @@ public class SelectAct extends Activity implements View.OnClickListener {
 
                 dialog = new AlertDialog.Builder(this);
 
-                dialog.setTitle("提示");
-                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                dialog.setTitle("是否删除该笔记");
+                dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         deleteData();
                         finish();
+                        Toast.makeText(SelectAct.this,"删除成功",Toast.LENGTH_SHORT).show();
                     }
                 });
                 dialog.setCancelable(false);
-                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();

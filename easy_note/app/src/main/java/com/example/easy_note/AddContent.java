@@ -6,10 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
+import android.widget.Toast;
 
 public class AddContent extends Activity implements View.OnClickListener {
 
@@ -41,6 +38,7 @@ public class AddContent extends Activity implements View.OnClickListener {
             case R.id.save_add:
                 addDB();
                 finish();
+                Toast.makeText(this,"操作成功",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.cancel_add:
                 finish();
@@ -53,7 +51,7 @@ public class AddContent extends Activity implements View.OnClickListener {
         ContentValues values = new ContentValues();
 
         if(ettext.getText()!= null)
-        values.put(NotesDB.CONTENT, ettext.getText().toString()+"\n创建时间:"+TimeUtil.getTime());
+        values.put(NotesDB.CONTENT,"-----------------[创建时间:"+TimeUtil.getTime()+"]------------------\n"+ettext.getText().toString());
         //values.put(NotesDB.TIME, getTime());
         dbWriter.insert(NotesDB.TABLE_NAME, null, values);
 
