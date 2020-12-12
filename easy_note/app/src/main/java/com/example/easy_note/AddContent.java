@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class AddContent extends Activity implements View.OnClickListener {
 
@@ -48,24 +49,16 @@ public class AddContent extends Activity implements View.OnClickListener {
     }
 
 
-
     public void addDB(){
         ContentValues values = new ContentValues();
 
         if(ettext.getText()!= null)
-        values.put(NotesDB.CONTENT, ettext.getText().toString());
-        values.put(NotesDB.TIME, getTime());
+        values.put(NotesDB.CONTENT, ettext.getText().toString()+"\n创建时间:"+TimeUtil.getTime());
+        //values.put(NotesDB.TIME, getTime());
         dbWriter.insert(NotesDB.TABLE_NAME, null, values);
 
 
     }
 
-    public String getTime(){
-        SimpleDateFormat format = new SimpleDateFormat(
-                "yyyy年MM月dd日 HH:mm:ss"
-        );
-        Date curDate = new Date();
-        String str = format.format(curDate);
-        return str;
-    }
+
 }

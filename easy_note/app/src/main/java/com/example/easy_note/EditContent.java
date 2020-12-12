@@ -27,6 +27,7 @@ public class EditContent extends AppCompatActivity implements View.OnClickListen
         savebtn = (Button)findViewById(R.id.save_edit);
         deletebtn = (Button)findViewById(R.id.cancel_edit);
         ettext = (EditText)findViewById(R.id.ettext_edit);
+
         ettext.setText(getIntent().getStringExtra("edit_content"));
 
         savebtn.setOnClickListener(this);
@@ -51,21 +52,14 @@ public class EditContent extends AppCompatActivity implements View.OnClickListen
     public void updateDB(){
         ContentValues values = new ContentValues();
 
-        String content = "最新修改时间:" + getTime() + "\n"+ ettext.getText().toString();
+        //String content = "最新修改时间:" + TimeUtil.getTime() + "\n"+ ettext.getText().toString();
         int id =  getIntent().getIntExtra("edit_id",0);
-        values.put(NotesDB.CONTENT, content);
+        values.put(NotesDB.CONTENT, ettext.getText().toString());
 
         dbWriter.update(NotesDB.TABLE_NAME, values,NotesDB.ID + "="+id, null);
 
 
     }
 
-    public String getTime(){
-        SimpleDateFormat format = new SimpleDateFormat(
-                "yyyy年MM月dd日 HH:mm:ss"
-        );
-        Date curDate = new Date();
-        String str = format.format(curDate);
-        return str;
-    }
+
 }
